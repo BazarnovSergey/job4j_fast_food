@@ -1,11 +1,9 @@
-package model;
+package src.main.java.domain.model;
 
 import lombok.*;
 
-import java.time.LocalDateTime;
-
 /**
- * модель платежа
+ * модель продукта
  */
 @AllArgsConstructor
 @NoArgsConstructor
@@ -13,16 +11,16 @@ import java.time.LocalDateTime;
 @Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @ToString
-public class Payment {
-
+public class Product {
     /**
-     * id платежа
+     *  id продукта
      */
     @EqualsAndHashCode.Include
     private int id;
 
     /**
-     * дата платежа
+     * название продукта
      */
-    private LocalDateTime create = LocalDateTime.now();
+    private String name;
+
 }

@@ -1,6 +1,6 @@
 package service;
 
-import model.Dish;
+import src.main.java.domain.model.Dish;
 
 import java.util.List;
 import java.util.Optional;

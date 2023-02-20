@@ -1,4 +1,4 @@
-package model;
+package src.main.java.domain.model;
 
 import lombok.*;
 
@@ -25,12 +25,17 @@ public class Order {
     /**
      * статус выполнения заказа
      */
-    private String status;
+    private Status status;
 
     /**
      * стоимость заказа
      */
     private int sum;
+
+    /**
+     * продукт
+     */
+    private Product product;
 
     /**
      * список блюд

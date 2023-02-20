@@ -1,4 +1,4 @@
-package model;
+package src.main.java.domain.model;
 
 import lombok.*;
 

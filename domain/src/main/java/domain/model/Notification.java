@@ -1,9 +1,9 @@
-package model;
+package src.main.java.domain.model;
 
 import lombok.*;
 
 /**
- * Модель доставки
+ * Модель уведомления
  */
 @AllArgsConstructor
 @NoArgsConstructor
@@ -11,17 +11,15 @@ import lombok.*;
 @Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @ToString
-public class Delivery {
+public class Notification {
     /**
-     * id доставки
+     * id уведомления
      */
     @EqualsAndHashCode.Include
     private int id;
 
     /**
-     * адрес доставки
+     * текст уведомления
      */
-    private Address address;
-
-
+    private String text;
 }
