@@ -1,4 +1,4 @@
-package src.main.java.domain.model;
+package domain.model;
 
 import lombok.*;
 
@@ -35,7 +35,7 @@ public class Order {
     /**
      * продукт
      */
-    private Product product;
+    private src.main.java.domain.model.Product product;
 
     /**
      * список блюд

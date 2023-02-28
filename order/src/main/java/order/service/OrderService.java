@@ -1,7 +1,7 @@
 package order.service;
 
-import src.main.java.domain.model.Order;
-import src.main.java.domain.model.Status;
+import domain.model.Order;
+import domain.model.Status;
 
 import java.util.Optional;
 

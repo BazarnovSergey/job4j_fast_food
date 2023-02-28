@@ -13,7 +13,7 @@ import lombok.*;
 @ToString
 public class Product {
     /**
-     *  id продукта
+     * id продукта
      */
     @EqualsAndHashCode.Include
     private int id;

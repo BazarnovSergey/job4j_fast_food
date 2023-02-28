@@ -1,10 +1,10 @@
 package order.service;
 
-import src.main.java.domain.model.Order;
-import src.main.java.domain.model.Status;
+import domain.model.Order;
+import domain.model.Status;
+import order.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import order.repository.OrderRepository;
 
 import java.util.NoSuchElementException;
 import java.util.Optional;

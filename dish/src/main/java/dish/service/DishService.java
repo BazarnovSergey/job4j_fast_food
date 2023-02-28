@@ -1,6 +1,6 @@
-package service;
+package dish.service;
 
-import src.main.java.domain.model.Dish;
+import domain.model.Dish;
 
 import java.util.List;
 import java.util.Optional;
@@ -10,14 +10,14 @@ import java.util.Optional;
  */
 public interface DishService {
 
-    Optional<Dish> addDish(Dish dish);
+    Dish addDish(Dish dish);
 
     List<Dish> findAll();
 
     Optional<Dish> findById(int id);
 
-    Dish update(Dish dish);
+    boolean update(int id, Dish dish);
 
-    void delete(Dish dish);
+    boolean delete(int id);
 
 }

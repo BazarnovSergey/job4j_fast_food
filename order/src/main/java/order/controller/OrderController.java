@@ -1,14 +1,14 @@
 package order.controller;
 
-import src.main.java.domain.model.Order;
-import src.main.java.domain.model.Status;
+import domain.model.Order;
+import domain.model.Status;
+import order.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
-import order.service.OrderService;
 
 import java.util.Optional;
 
