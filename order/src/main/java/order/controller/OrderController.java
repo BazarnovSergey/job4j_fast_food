@@ -28,6 +28,7 @@ public class OrderController {
 
     @PostMapping("/")
     public ResponseEntity<Order> create(@RequestBody Order order) {
+        this.orderService.sendOrder(order);
         return new ResponseEntity<Order>(
                 this.orderService.createOrder(order),
                 HttpStatus.CREATED

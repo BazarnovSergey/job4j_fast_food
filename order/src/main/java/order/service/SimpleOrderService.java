@@ -4,6 +4,7 @@ import domain.model.Order;
 import domain.model.Status;
 import order.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.NoSuchElementException;
@@ -14,9 +15,12 @@ public class SimpleOrderService implements OrderService {
 
     private final OrderRepository orders;
 
+    private final KafkaTemplate<Integer, Order> kafkaTemplate;
+
     @Autowired
-    public SimpleOrderService(OrderRepository orders) {
+    public SimpleOrderService(OrderRepository orders, KafkaTemplate<Integer, Order> kafkaTemplate) {
         this.orders = orders;
+        this.kafkaTemplate = kafkaTemplate;
     }
 
     @Override
@@ -41,6 +45,11 @@ public class SimpleOrderService implements OrderService {
     @Override
     public void delete(Order order) {
         orders.delete(order);
+    }
+
+    @Override
+    public void sendOrder(Order order) {
+        kafkaTemplate.send("order", order);
     }
 
 }

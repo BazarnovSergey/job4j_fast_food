@@ -15,4 +15,6 @@ public interface OrderService {
 
     void delete(Order order);
 
+    void sendOrder(Order order);
+
 }
